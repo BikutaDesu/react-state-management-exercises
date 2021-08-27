@@ -4,13 +4,17 @@ import FirstComponent from "./components/FirstComponent";
 import SecondComponent from "./components/SecondComponent";
 import ThirdComponent from "./components/ThirdComponent";
 import FourthComponent from "./components/FourthComponent";
+import FirstReduxComponent from "./components/FirstReduxComponent"
+import SecondReduxComponent from './components/SecondReduxComponent'
 import { SimpleContextProvider } from "./state/FirstExample-SimpleContext";
 import { ComplexContextProvider } from "./state/SecondExample-ComplexContext";
 
 function App() {
   return (
     <div className='App'>
-      <SimpleContextProvider>
+      <FirstReduxComponent />
+      <SecondReduxComponent />
+      {/* <SimpleContextProvider>
         <div style={{ width: "100%" }}>
           <FirstComponent />
           <SecondComponent />
@@ -22,7 +26,7 @@ function App() {
           <ThirdComponent />
           <FourthComponent />
         </div>
-      </ComplexContextProvider>
+      </ComplexContextProvider> */}
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         <p>
