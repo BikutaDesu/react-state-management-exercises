@@ -8,12 +8,17 @@ import FirstReduxComponent from "./components/FirstReduxComponent"
 import SecondReduxComponent from './components/SecondReduxComponent'
 import { SimpleContextProvider } from "./state/FirstExample-SimpleContext";
 import { ComplexContextProvider } from "./state/SecondExample-ComplexContext";
+import FirstRxjsComponent from "./components/FirstRxjsComponent";
+import SecondRxjsComponent from "./components/SecondRxjsComponent";
+
 
 function App() {
   return (
     <div className='App'>
-      <FirstReduxComponent />
-      <SecondReduxComponent />
+      <FirstRxjsComponent />
+      <SecondRxjsComponent />
+      {/* <FirstReduxComponent />
+      <SecondReduxComponent /> */}
       {/* <SimpleContextProvider>
         <div style={{ width: "100%" }}>
           <FirstComponent />
