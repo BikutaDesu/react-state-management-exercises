@@ -13,6 +13,7 @@ import SecondRxjsComponent from './components/SecondRxjsComponent'
 import FirstMobxComponent from './components/mobx/FirstComponent'
 import SecondMobxComponent from './components/mobx/SecondComponent'
 import userStore from './state/FifthExample-Mobx/user.store'
+import jobStore from './state/FifthExample-Mobx/job.store'
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
         </div>
       </ComplexContextProvider> */}
       <FirstMobxComponent userState={userStore} />
-      <SecondMobxComponent userState={userStore} />
+      <SecondMobxComponent userState={userStore} jobState={jobStore} />
     </div>
   )
 }

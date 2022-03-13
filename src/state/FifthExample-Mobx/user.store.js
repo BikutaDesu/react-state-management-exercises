@@ -11,7 +11,8 @@ class User {
       detail: observable,
       job: observable,
       changeUserName: action,
-      cangeUserJob: action
+      changeUserJob: action,
+      liquidValue: computed
     })
   }
 
@@ -19,8 +20,16 @@ class User {
     this.detail.name = name
   }
 
-  cangeUserJob(job) {
+  changeUserJob(job) {
     this.job = job
+  }
+
+  get liquidValue() {
+    let finalValue = 0
+    if (this.job) {
+      finalValue = this.job.grossValue - this.job.tribute * 100
+    }
+    return finalValue
   }
 }
 

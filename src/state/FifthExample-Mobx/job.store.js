@@ -3,12 +3,11 @@ class Job {
   id = '-'
   data = {
     name: '-',
-    liquidValue: 0,
+    grossValue: 0,
     tribute: 15
   }
   constructor() {
     makeObservable(this, {
-      id: observable,
       data: observable,
       changeJob: action
     })
@@ -17,8 +16,9 @@ class Job {
   changeJob(job) {
     this.id = job.id
     this.data.name = job.name
-    this.data.liquidValue = job.liquidValue
+    this.data.grossValue = job.grossValue
     this.data.tribute = job.tribute
   }
 }
-export default observableJobStore = new Job()
+const observableJobStore = new Job()
+export default observableJobStore
